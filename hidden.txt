@@ -1,0 +1,67 @@
+from PIL import Image
+
+def encrypt_image(image_path, key):
+    # Buka gambar
+    image = Image.open(image_path)
+    # Konversi gambar ke mode RGB
+    image = image.convert("RGB")
+    
+    width, height = image.size
+    
+    # Membangun matriks piksel baru untuk gambar terenkripsi
+    encrypted_image = Image.new("RGB", (width, height))
+    
+    for y in range(height):
+        for x in range(width):
+            # Dapatkan piksel RGB pada posisi (x, y)
+            r, g, b = image.getpixel((x, y))
+            
+            # Enkripsi piksel dengan kunci
+            r = (r + key) % 256
+            g = (g + key) % 256
+            b = (b + key) % 256
+            
+            # Set piksel terenkripsi pada gambar baru
+            encrypted_image.putpixel((x, y), (r, g, b))
+    
+    # Simpan gambar terenkripsi
+    encrypted_image.save("encrypted_image.png")
+    print("Gambar berhasil dienkripsi.")
+
+
+def decrypt_image(image_path, key):
+    # Buka gambar terenkripsi
+    encrypted_image = Image.open(image_path)
+    # Konversi gambar ke mode RGB
+    encrypted_image = encrypted_image.convert("RGB")
+    
+    width, height = encrypted_image.size
+    
+    # Membangun matriks piksel baru untuk gambar terdekripsi
+    decrypted_image = Image.new("RGB", (width, height))
+    
+    for y in range(height):
+        for x in range(width):
+            # Dapatkan piksel RGB pada posisi (x, y)
+            r, g, b = encrypted_image.getpixel((x, y))
+            
+            # Dekripsi piksel dengan kunci
+            r = (r - key) % 256
+            g = (g - key) % 256
+            b = (b - key) % 256
+            
+            # Set piksel terdekripsi pada gambar baru
+            decrypted_image.putpixel((x, y), (r, g, b))
+    
+    # Simpan gambar terdekripsi
+    decrypted_image.save("decrypted_image.png")
+    print("Gambar berhasil didekripsi.")
+
+
+# Contoh penggunaan
+image_path = "gambar.jpg"
+key = 42
+
+encrypt_image(image_path, key)
+
+decrypt_image("encrypted_image.png", key)

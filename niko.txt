@@ -1,0 +1,18 @@
+Gambar 2.1 Struktur Organisasi MI Hijriyah 1 Palembang
+Gambar 3.1 Flowchart yang sedang berjalan
+Gambar 3.2 Flowchart yang diusulkan dalam Aplikasi Kehadiran Guru
+Gambar 3.3 Use Case aplikasi kehadiran Guru
+Gambar 3.4 Class Diagram aplikasi kehadiran Guru
+Gambar 3.5 Activity Diagram aplikasi kehadiran Guru
+Gambar 3.6 Desain Tampilan Login dan Scan QR Code
+Gambar 3.7 Desain Tampilan Beranda
+Gambar 3.8 Desain Tampilan Data Guru
+Gambar 3.9 Desain Tampilan QR Code
+Gambar 3.10 Desain Tampilan Absen QR
+Gambar 3.11 Desain Tampilan Rekap Absen
+Gambar 3.12 Tampilan pada Halaman Login dan Scan QR Code
+Gambar 3.13 Tampilan pada Halaman Beranda
+Gambar 3.14 Tampilan pada Halaman Data Guru
+Gambar 3.15 Tampilan pada Halaman QR Code
+Gambar 3.16 Tampilan pada Halaman Absen QR
+Gambar 3.17 Tampilan pada Halaman Rekap Absen
